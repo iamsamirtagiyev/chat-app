@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  &::-webkit-scrollbar {
+    @apply w-1;
+  }
+  &::-webkit-scrollbar-thumb {
+    @apply bg-white/20 rounded-full;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-black text-white;
+  }
+  .field {
+    @apply w-full bg-zinc-900 rounded-lg flex items-center p-2.5 transition-all duration-500 border-2 border-transparent hover:border-white/20 focus-within:hover:border-white/50 focus-within:border-white/50;
+    input {
+      @apply w-full bg-transparent text-lg font-medium outline-none pl-2;
+    }
+    span {
+      @apply text-2xl text-white/20 border-r-2 border-white/20 pr-2;
+    }
+  }
+}
